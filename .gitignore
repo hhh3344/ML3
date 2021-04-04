@@ -154,3 +154,6 @@ archive/t10k-images-idx3-ubyte
 archive/fashion-mnist_train.csv
 archive/fashion-mnist_test.csv
 
+model/checkpoint/.data-00000-of-00001
+model/checkpoint/.index
+model/checkpoint/checkpoint
