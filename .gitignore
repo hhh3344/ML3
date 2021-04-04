@@ -4,3 +4,4 @@ archive/t10k-images-idx3-ubyte
 archive/t10k-labels-idx1-ubyte
 archive/train-images-idx3-ubyte
 archive/train-labels-idx1-ubyte
+input/creditcard.csv
