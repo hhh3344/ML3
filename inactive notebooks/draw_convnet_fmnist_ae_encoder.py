@@ -155,9 +155,9 @@ if __name__ == '__main__':
 
     ############################
     # conv layers
-    size_list = [(32, 32), (32, 32), (16, 16), (16, 16), (8, 8), (8, 8)] # change here
-    num_list = [3, 64, 64, 32, 32, 8] # change here
-    x_diff_list = [0, layer_width, layer_width, layer_width, layer_width, layer_width] # change here
+    size_list = [(28, 28), (28, 28), (14, 14), (14, 14), (7, 7), (7, 7), (7, 7)] # change here
+    num_list = [1, 32, 32, 16, 16, 8, 4] # change here
+    x_diff_list = [0, layer_width, layer_width, layer_width, layer_width, layer_width, layer_width] # change here
     text_list = ['Inputs'] + ['Feature\nmaps'] * (len(size_list) - 1)
     loc_diff_list = [[3, -3]] * len(size_list)
 
@@ -181,11 +181,11 @@ if __name__ == '__main__':
 
     ############################
     # in between layers
-    start_ratio_list = [[0.4, 0.5], [0.4, 0.8], [0.4, 0.5], [0.4, 0.8], [0.4, 0.5]] # change here
-    end_ratio_list = [[0.4, 0.5], [0.4, 0.8], [0.4, 0.5], [0.4, 0.8], [0.4, 0.5]] # change here 
-    patch_size_list = [(3, 3), (2, 2), (3, 3), (2, 2), (3, 3)] # change here 
+    start_ratio_list = [[0.4, 0.5], [0.4, 0.8], [0.4, 0.5], [0.4, 0.8], [0.4, 0.5], [0.4, 0.8]] # change here
+    end_ratio_list = [[0.4, 0.5], [0.4, 0.8], [0.4, 0.5], [0.4, 0.8], [0.4, 0.5], [0.4, 0.8]] # change here 
+    patch_size_list = [(3, 3), (2, 2), (3, 3), (2, 2), (3, 3), (3, 3)] # change here 
     ind_bgn_list = range(len(patch_size_list))
-    text_list = ['Convolution', 'Max-pooling', 'Convolution', 'Max-pooling', 'Convolution'] # change here 
+    text_list = ['Convolution', 'Max-pooling', 'Convolution', 'Max-pooling', 'Convolution', 'Convolution'] # change here 
 
     for ind in range(len(patch_size_list)):
         add_mapping(
@@ -200,7 +200,7 @@ if __name__ == '__main__':
     ############################
     # fully connected layers
     size_list = [(fc_unit_size, fc_unit_size)] * 1  # change here 
-    num_list = [512]  # change here 
+    num_list = [196]  # change here 
     num_show_list = list(map(min, num_list, [NumFcMax] * len(num_list)))
     x_diff_list = [sum(x_diff_list) + layer_width, layer_width, layer_width]
     top_left_list = np.c_[np.cumsum(x_diff_list), np.zeros(len(x_diff_list))]
