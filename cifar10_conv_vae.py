@@ -18,8 +18,8 @@ from tensorflow.keras.datasets import cifar10
 X_train = X_train.astype('float32').reshape(-1,32*32*3) / 255.
 X_test = X_test.astype('float32').reshape(-1,32*32*3) / 255.
 labels_name = {0: 'airplane',
-    1: 'automobile',
     2: 'bird',
+    1: 'automobile',
     3: 'cat',
     4: 'deer',
     5: 'dog',
