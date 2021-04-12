@@ -175,3 +175,5 @@ logs/fit/20210405-102822/train/plugins/profile/2021_04_05_08_28_24/NAN-DESKTOP.k
 logs/fit/20210405-102822/train/plugins/profile/2021_04_05_08_28_24/NAN-DESKTOP.input_pipeline.pb
 logs/fit/20210405-102822/train/events.out.tfevents.1617611304.NAN-DESKTOP.profile-empty
 logs/fit/20210405-102822/train/events.out.tfevents.1617611303.NAN-DESKTOP.15356.16484.v2
+archive/fashion-mnist_test.zip
+archive/fashion-mnist_train.zip
